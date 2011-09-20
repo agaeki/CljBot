@@ -1,0 +1,6 @@
+THIS IS A README
+
+CljBot is written in java and clojure. I like it.
+
+CljBotMain should start the bot, connect to irc.uwcs.co.uk and join #lemonparty.
+
