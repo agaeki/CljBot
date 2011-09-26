@@ -50,7 +50,9 @@ public class CljBot {
 			System.err.println("IOException occurred, please try again.");
 			System.exit(1);
 		} catch (InterruptedException e) {
-		} catch (Exception e) {}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	private class send implements Runnable {
@@ -94,7 +96,7 @@ public class CljBot {
 		public void run() {
 			// TODO Auto-generated method stub
 			try {
-				System.out.println("Invoking " + fun.toString());
+				System.out.println("Invoking " + fun.toString() + " " + mes);
 				String msg = fun.invoke(mes).toString();
 				System.out.println("Generated reply " + msg + " from " + fun.toString());
 				outbox.addLast(msg);
