@@ -4,3 +4,5 @@ CljBot is written in java and clojure. I like it.
 
 CljBotMain should start the bot, connect to irc.uwcs.co.uk and join #lemonparty.
 
+Currently CljBot is hardcoded to only respond to ?say <foo>. The next step is to enable greater flexibility 
+to easily allow the creation of more commands and functionality.
