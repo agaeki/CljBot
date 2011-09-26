@@ -4,17 +4,11 @@ CljBot is written in java and clojure. I like it.
 
 CljBotMain should start the bot, connect to irc.uwcs.co.uk and join #lemonparty.
 
-  You can now write your own commands in functions.clj. The function must be named "command-<command name>" 
-and must take one string as an argument. Command name will be the command from irc and must be lower-case 
-(although when invoking it from irc it can be any case). The string that will be passed to the function will 
-be the target name from the irc server (channel name or the bot's name if from PM) followed by the arguments
-passed from irc all separated by a space (i.e. agaeki says "?say foobar" in #lemonparty -> (command-say "#lemonparty foobar)).
+  You can now write your own commands in functions.clj. The function must be named "command-<command name>" and must take one string as an argument. Command name will be the command from irc and must be lower-case (although when invoking it from irc it can be any case). The string that will be passed to the function will be the target name from the irc server (channel name or the bot's name if from PM) followed by the arguments passed from irc all separated by a space (i.e. agaeki says "?say foobar" in #lemonparty -> (command-say "#lemonparty foobar)).
 The function should return the appropriate reply to the server as a String ((command-say "#lemonparty foobar") returns "PRIVMSG #lemonparty foobar").
 
 
 Proposed To Do:
 
-1)  Contextual replies so commands like ?say work in PM as well as channel. Currently ?say from PM sends 
-      the message to itself, although that can't be exploited for infinite looping
-2)  Alias system to allow custom commands to be written from irc. This also has the potential to turn CljBot 
-      into an irc REPL
+1)  Contextual replies so commands like ?say work in PM as well as channel. Currently ?say from PM sends the message to itself, although that can't be exploited for infinite looping
+2)  Alias system to allow custom commands to be written from irc. This also has the potential to turn CljBot into an irc REPL
